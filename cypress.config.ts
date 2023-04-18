@@ -5,6 +5,11 @@ export default defineConfig({
   screenshotOnRunFailure: true,
   defaultCommandTimeout: 250,
   fixturesFolder: false,
+  reporter: 'junit',
+  reporterOptions: {
+    mochaFile: 'results/my-test-output.xml',
+    toConsole: true,
+  },
   component: {
     setupNodeEvents: (on, config) => {
       require('@cypress/code-coverage/task')(on, config)
