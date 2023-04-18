@@ -1,7 +1,7 @@
 import { AppComponent } from "./app.component"
 
 describe('AppComponent.cy.ts', () => {
-  it('test 1', () => {
+  it.only('test 1', () => {
     cy.mount(AppComponent)
     cy.get('blah').should("be.visible")
   })
